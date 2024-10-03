@@ -66,7 +66,7 @@ function calcular() {
 
         //consumo de água
         litros = (peso * 35) / 1000
-        document.getElementById("agua").innerHTML = `${litros.toFixed(1)} litors/dia`
+        document.getElementById("agua").innerHTML = `${litros.toFixed(1)} litros/dia`
 
 
         //get
@@ -94,7 +94,7 @@ function calcular() {
 function limpar() {
     document.getElementById('imc').innerHTML = "IMC"
     document.getElementById('status').innerHTML = "status"
-    document.getElementById('frq').innerHTML = "FCM"
+    document.getElementById('freq').innerHTML = "FCM"
     document.getElementById('calorias').innerHTML = "calorias/dia"
     document.getElementById('agua').innerHTML = "litros/dia"
     document.getElementById('grafico').src = "img/reset.png "
