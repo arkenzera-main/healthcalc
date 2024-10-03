@@ -60,6 +60,31 @@ function calcular() {
             document.getElementById("grafico").src = "img/obesidadeExtrema.png"
         }
 
+        //FCM
+        fcm = 208 - (0.7 * idade)
+        document.getElementById("freq").innerHTML = fcm
+
+        //consumo de água
+        litros = (peso * 35) / 1000
+        document.getElementById("agua").innerHTML = `${litros.toFixed(1)} litors/dia`
+
+
+        //get
+        //passo 1: capturar o valor da lista(combobox)
+        let lista = document.getElementById('atividade')
+        let valor = Number(lista.options[lista.selectedIndex].value)
+        console.log(valor)
+        //passo 2: executar uma fórmula diferente para o sexo selecionado
+        if (document.getElementById("m").checked === true) {
+            get = (66 + (13.7 * peso) + (5 * (altura * 100) - (6.8 * idade))) * valor
+        }
+        if (document.getElementById("f").checked === true) {
+            get = (655 + (9.6 * peso) + (1.8 * (altura * 100) - (4.7 * idade))) * valor
+        }
+
+        // passo 3: exibir o resultado 
+        //(Math.floor converte para número inteiro)
+        document.getElementById('calorias').innerHTML = `${Math.floor(get)} calorias/dia`
     } 
 
     
@@ -67,6 +92,12 @@ function calcular() {
 }
 
 function limpar() {
+    document.getElementById('imc').innerHTML = "IMC"
+    document.getElementById('status').innerHTML = "status"
+    document.getElementById('frq').innerHTML = "FCM"
+    document.getElementById('calorias').innerHTML = "calorias/dia"
+    document.getElementById('agua').innerHTML = "litros/dia"
+    document.getElementById('grafico').src = "img/reset.png "
 
 }
 

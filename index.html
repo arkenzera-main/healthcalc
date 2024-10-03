@@ -33,6 +33,7 @@
         </select>
         <div id="buttons">
             <input type="button" value="Calcular" onclick="calcular()">
+            <input type="reset" value="Limpar" onclick="limpar()">
         </div>
     </form>
     <hr>
@@ -45,14 +46,13 @@
             <h3 id="status">status</h3>
 
         </div>
-        <!-- coração pulsando -->
+        <!-- coração pulsando com FCM -->
         <div class="coracao">
             <div class="quadrado"></div>
             <div class="circulo top"></div>
             <div class="circulo left"></div>
-
+            <h2 id="freq">FCM</h2>
         </div>
-        <h2 id="freq">FCM</h2>
     </div>
     <hr>
     <!-- get e litros -->
@@ -60,9 +60,8 @@
     <h3 id="calorias">Calorias/dia</h3>
     <hr>
     <h2>Consumo de água:</h2>
-    <h3 id="agua">litros/dia</h3>
+    <h3 id="agua">Litros/dia</h3>
 
     <script src="app.js"></script>
 </body>
 </html>
-
